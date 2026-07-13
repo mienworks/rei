@@ -12,7 +12,7 @@ import {
   Section,
   Text,
   Tailwind,
-} from "@react-email/components";
+} from "react-email";
 import { emailTheme } from "@/components/email/theme";
 
 export const InviteEmailTemplate = ({
@@ -54,7 +54,7 @@ export const InviteEmailTemplate = ({
                 src={`${baseUrl}/images/email-logo.png`}
                 width="42"
                 height="42"
-                alt="Pages CMS"
+                alt="Mien Rei"
                 className="my-0 mx-auto"
               />
             </Section>
@@ -62,7 +62,7 @@ export const InviteEmailTemplate = ({
               className="text-[24px] font-semibold p-0 my-[30px] mx-0 text-center tracking-tight"
               style={{ color: emailTheme.foreground }}
             >
-              Join &quot;{repoName}&quot; on Pages CMS
+              Join &quot;{repoName}&quot; on Mien Rei
             </Heading>
             <Text
               className="text-[16px] leading-[24px]"
@@ -75,8 +75,8 @@ export const InviteEmailTemplate = ({
               >
                 {invitedByName}
               </Link>{" "}
-              has invited you to the &quot;{repoName}&quot; project on Pages
-              CMS. Use the following link to start collaborating:
+              has invited you to the &quot;{repoName}&quot; project on Mien Rei.
+              Use the following link to start collaborating:
             </Text>
             <Section className="text-center mt-[24px] mb-[24px]">
               <Button

@@ -1,14 +1,14 @@
-// These hex values are the email-safe equivalents of the app's light theme tokens
-// from app/globals.css. We resolve them here because email clients should not rely
+// These hex values are the email-safe equivalents of app/tokens.css.
+// We resolve them here because email clients should not rely
 // on CSS variables or OKLCH support.
 export const emailTheme = {
-  background: "#ffffff",
-  foreground: "#0a0a0a",
-  muted: "#f5f5f5",
-  mutedForeground: "#737373",
-  link: "#0a0a0a",
-  mutedLink: "#737373",
-  buttonBackground: "#009869",
-  buttonForeground: "#edfdf5",
-  buttonBorder: "#009869",
+  background: "#c7c0b2",
+  foreground: "#1a1a1a",
+  muted: "#ddd5c4",
+  mutedForeground: "#5d5a54",
+  link: "#1a1a1a",
+  mutedLink: "#5d5a54",
+  buttonBackground: "#1a1a1a",
+  buttonForeground: "#ddd5c4",
+  buttonBorder: "#1a1a1a",
 } as const;

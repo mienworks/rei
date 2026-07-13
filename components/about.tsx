@@ -84,11 +84,11 @@ export function About() {
                     <path d="M0 4.8C0 2.14903 2.14903 0 4.8 0H12.0118C13.2848 0 14.5057 0.505713 15.4059 1.40589L22.5941 8.59411C23.4943 9.49429 24 10.7152 24 11.9882V19.2C24 21.851 21.851 24 19.2 24H4.8C2.14903 24 0 21.851 0 19.2V4.8Z"></path>
                   </svg>
                 </span>
-                <span className="sr-only">About Pages CMS</span>
+                <span className="sr-only">About Mien Rei</span>
               </Button>
             </DialogTrigger>
           </TooltipTrigger>
-          <TooltipContent>About Pages CMS</TooltipContent>
+          <TooltipContent>About Mien Rei</TooltipContent>
         </Tooltip>
       </TooltipProvider>
       <DialogContent className="w-[20rem] max-w-[calc(100vw-2rem)]">
@@ -104,12 +104,16 @@ export function About() {
             </svg>
           </div>
           <DialogTitle className="text-base font-semibold">
-            Pages CMS
+            Mien Rei
           </DialogTitle>
           <DialogDescription>
-            Open source CMS for static sites. Edit directly on GitHub with a
-            clean interface.
+            Edit static-site content directly on GitHub with a focused
+            interface.
           </DialogDescription>
+          <p className="text-xs text-muted-foreground">
+            Powered by{" "}
+            <ExternalLink href="https://pagescms.org">Pages CMS</ExternalLink>
+          </p>
         </DialogHeader>
 
         <div className="rounded-lg border">

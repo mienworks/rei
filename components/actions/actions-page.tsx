@@ -81,7 +81,7 @@ const getRunIcon = (run: ActionRunSummary) => {
   if (isActionRunActive(run)) return <Loader className="size-4 animate-spin" />;
   if (run.conclusion === "success")
     return (
-      <CircleCheck className="size-4 text-green-600 dark:text-green-400" />
+      <CircleCheck className="size-4 text-success" />
     );
   return <CircleX className="size-4 text-destructive" />;
 };

@@ -29,7 +29,7 @@
 }
 
 .cm-diagnostic-warning::before {
-  @apply text-amber-500;
+  @apply text-warning;
 }
 
 .cm-lintRange-error {

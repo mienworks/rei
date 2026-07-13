@@ -6,7 +6,7 @@ import { getInstallationRepos, getInstallations } from "@/lib/github-app";
 import { requireGithubRepoWriteAccess } from "@/lib/authz-server";
 import { InviteEmailTemplate } from "@/components/email/invite";
 import { CollaboratorAddedEmailTemplate } from "@/components/email/collaborator-added";
-import { render } from "@react-email/render";
+import { render } from "react-email";
 import { sendEmail } from "@/lib/mailer";
 import { getBaseUrl } from "@/lib/base-url";
 import { db } from "@/db";
@@ -48,7 +48,7 @@ const assertRepoInInstallation = async (
       installationRepo.name?.toLowerCase() === repo.toLowerCase()
     )
   );
-  if (!isInstalledForRepo) throw new Error(`"${owner}/${repo}" is not part of your Pages CMS installation.`);
+  if (!isInstalledForRepo) throw new Error(`"${owner}/${repo}" is not part of your Mien Rei installation.`);
 
   return {
     repoAccess,
@@ -188,7 +188,7 @@ const handleAddCollaborator = async (prevState: any, formData: FormData) => {
           );
           await sendEmail({
             to: normalizedEmail,
-            subject: `Join "${owner}/${repo}" on Pages CMS`,
+            subject: `Join "${owner}/${repo}" on Mien Rei`,
             html,
           });
         } catch (error: any) {
@@ -209,7 +209,7 @@ const handleAddCollaborator = async (prevState: any, formData: FormData) => {
           );
           await sendEmail({
             to: normalizedEmail,
-            subject: `You were added to "${owner}/${repo}" on Pages CMS`,
+            subject: `You were added to "${owner}/${repo}" on Mien Rei`,
             html,
           });
         } catch (error: any) {
@@ -338,7 +338,7 @@ const handleResendCollaboratorInvite = async (collaboratorId: number, owner: str
 
     await sendEmail({
       to: collaborator.email,
-      subject: `Join "${owner}/${repo}" on Pages CMS`,
+      subject: `Join "${owner}/${repo}" on Mien Rei`,
       html,
     });
 

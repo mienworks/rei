@@ -10,7 +10,7 @@ import { sendEmail } from "@/lib/mailer";
 import { syncGithubProfileOnLogin } from "@/lib/github-account";
 import { bindCollaboratorInvitesToUser } from "@/lib/collaborator-access";
 import { LoginEmailTemplate } from "@/components/email/login";
-import { render } from "@react-email/render";
+import { render } from "react-email";
 
 export const auth = betterAuth({
   baseURL: getBaseUrl(),
@@ -164,7 +164,7 @@ export const auth = betterAuth({
       sendVerificationOTP: async ({ email, otp, type }) => {
         if (type !== "sign-in") return;
 
-        const subject = `Your Pages CMS temporary code is ${otp}`;
+        const subject = `Your Mien Rei temporary code is ${otp}`;
         const html = await render(
           LoginEmailTemplate({
             email,

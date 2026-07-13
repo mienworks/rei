@@ -12,7 +12,7 @@ import {
   Section,
   Text,
   Tailwind,
-} from "@react-email/components";
+} from "react-email";
 import { emailTheme } from "@/components/email/theme";
 
 export const CollaboratorAddedEmailTemplate = ({
@@ -38,7 +38,7 @@ export const CollaboratorAddedEmailTemplate = ({
     <Html>
       <Head />
       <Preview>
-        You were added to &quot;{repoName}&quot; on Pages CMS
+        You were added to &quot;{repoName}&quot; on Mien Rei
       </Preview>
       <Tailwind>
         <Body
@@ -54,7 +54,7 @@ export const CollaboratorAddedEmailTemplate = ({
                 src={`${baseUrl}/images/email-logo.png`}
                 width="42"
                 height="42"
-                alt="Pages CMS"
+                alt="Mien Rei"
                 className="my-0 mx-auto"
               />
             </Section>
@@ -75,7 +75,7 @@ export const CollaboratorAddedEmailTemplate = ({
               >
                 {invitedByName}
               </Link>{" "}
-              added you to the &quot;{repoName}&quot; project on Pages CMS.
+              added you to the &quot;{repoName}&quot; project on Mien Rei.
               You already have access, so there is nothing to accept.
             </Text>
             <Section className="text-center mt-[24px] mb-[24px]">
